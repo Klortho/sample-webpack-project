@@ -1,6 +1,6 @@
 'use strict';
 
-import BlackTriangle from "./BlackTriangle";
+import BlackTriangle from "./components/BlackTriangle";
 
 const triangle = new BlackTriangle('#triangle');
 
@@ -9,6 +9,5 @@ window.setInterval(
     triangle.rotate(1);
     triangle.render();
   },
-  10
+  20
 );
-

@@ -9,6 +9,7 @@ module.exports = {
   entry: [
     // Babel-transpiled code still depends on a few polyfills at runtime
     'babel-polyfill',
+    './src/theme/main.less',
     './src/main',
     'webpack-dev-server/client?http://localhost:8080'
   ],
@@ -20,16 +21,21 @@ module.exports = {
   },
 
   module: {
-    // Configure the Babel loader, which handles all .js files
     loaders: [
-      {
-        test: /\.js$/,
+
+      // Configure the Babel loader, which handles all .js files
+      { test: /\.js$/,
         include: path.join(__dirname, 'src'),
         loader: 'babel-loader',
         query: {
           presets: ["es2015"],  
         }
-      }
+      },
+
+      // LESS loader
+      { test: /\.less$/,
+        loader: "style!css!autoprefixer!less"
+      },
     ]
   },
 

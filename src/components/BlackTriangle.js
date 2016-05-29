@@ -1,8 +1,13 @@
 export default class BlackTriangle {
   constructor(selector) {
     this.angle = 0;
-    this.innerEl = document.querySelector(selector)
-      .querySelector('.BlackTriangle-inner');
+
+    this.innerEl = document.createElement('div');
+    this.innerEl.className = "BlackTriangle-inner";
+
+    this.el = document.querySelector(selector)
+    this.el.className = "BlackTriangle";
+    this.el.appendChild(this.innerEl);
   }
 
   rotate(amount) {

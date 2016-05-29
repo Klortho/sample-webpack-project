@@ -12,6 +12,8 @@ Here are the features of this sample project:
 
 # Steps to set this up from scratch
 
+## Set up the repo
+
 Make sure the relative path `./node_modules/.bin` is in your
 PATH.
 
@@ -27,6 +29,8 @@ git commit -m 'initial commit'
 Copied content from [this 
 gist]( https://gist.github.com/jamesknelson/9b7db05268e747b4aa4d)
 into the src directory.
+
+### Webpack and Babel
 
 ```bash
 # Webpack essentials
@@ -52,4 +56,15 @@ a spinning back triangle.
 
 The dev server will automatically rebuild your files when you
 change them, and even automatically reload them in yor browser.
+
+### Less
+
+To add support for Less, and for loading CSS and Less files as
+modules, add the following:
+
+```
+npm i --save-dev style-loader autoprefixer-loader
+npm i --save-dev less css-loader less-loader
+```
+
 
