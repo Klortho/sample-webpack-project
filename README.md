@@ -24,10 +24,15 @@ webpack-dev-server
 This will automatically detect changes to the source files, rebuild 
 everything, and then trigger your browser to reload the page.
 
-To build the distribution files:
+Building the distribution files requires two runs of webpack:
 
 ```
-webpack
+webpack                        //=> dev versions
+WEBPACK_PROFILE=prod webpack   //=> prod versions
+```
+
+For minified:
+
 ```
 
 After that's done, you should be able to open the dist/index.html file in

@@ -13,11 +13,20 @@ Here are the features of this sample project:
 * Supports CSS and Less
 * Dev server with auto-reload
 * Produces sourcemaps
+* Minified and unminified distribution files
 
 For how to do basic development tasks, see the [README.md](README.md).
 The rest of this file contains more detailed information.
 
 
+
+# To do
+
+* The profile setup could be simplified. Right now, the default is `dev`.
+  We could just make this a single switch and  function that merges in
+  and/or overwrites, as needed, to turn it into `prod`.
+* Add jQuery, as an example. See 
+  [webpack-experiments](https://github.com/Klortho/webpack-experiments/blob/master/webpack.config.js).
 
 # Steps to set this up from scratch
 
@@ -103,3 +112,7 @@ plugins: [
   }),
 ```
 
+### Setting up profiles
+
+This merely involved separating the minimum configuration that
+was different for each profile. 
