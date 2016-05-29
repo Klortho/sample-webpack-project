@@ -1,7 +1,8 @@
 export default class BlackTriangle {
   constructor(selector) {
     this.angle = 0;
-    this.innerEl = document.querySelector(selector).querySelector('.BlackTriangle-inner');
+    this.innerEl = document.querySelector(selector)
+      .querySelector('.BlackTriangle-inner');
   }
 
   rotate(amount) {
