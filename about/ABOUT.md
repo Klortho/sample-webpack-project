@@ -116,3 +116,16 @@ plugins: [
 
 This merely involved separating the minimum configuration that
 was different for each profile. 
+
+
+### Testing with Mocha and chai
+
+```
+npm i --save-dev mocha chai
+```
+
+Then, created a unit test file in test/test.js. Ran it with
+
+```
+mocha
+```
