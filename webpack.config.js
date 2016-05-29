@@ -1,6 +1,7 @@
 // Webpack configuration reference:
 // https://webpack.github.io/docs/configuration.html
 
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 var path = require('path');
 var webpack = require('webpack');
 
@@ -24,6 +25,13 @@ module.exports = {
     filename: 'main.js'
   },
 
+  plugins: [
+    // Tell webpack what HTML files to include in the output dist
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    }),
+  ],
+
   module: {
     loaders: [
 
@@ -42,7 +50,7 @@ module.exports = {
       { test: /\.less$/,
         loader: "style!css!autoprefixer!less"
       },
-    ]
+    ],
   },
 
   // Webpack dev servers to serve source maps, so when debugging in the

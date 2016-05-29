@@ -66,6 +66,14 @@ a spinning back triangle.
 The dev server will automatically rebuild your files when you
 change them, and even automatically reload them in yor browser.
 
+In addition, sourcemaps are sent to the browser, so that you 
+can debug your code while looking at the original ES6 version,
+rather than the transpiled version after it goes through Babel.
+
+See this screenshot:
+
+![Sourcemap screenshot](sourcemap.png?raw=true "Sourcemaps")
+
 ### Less
 
 To add support for Less, and for loading CSS and Less files as
@@ -76,4 +84,22 @@ npm i --save-dev style-loader autoprefixer-loader
 npm i --save-dev less css-loader less-loader
 ```
 
+### Distribution
+
+Add this so as to include the HTML file in the dist:
+
+```
+npm i --save html-webpack-plugin
+```
+
+Then, in your webpack.config.js:
+
+```javascript
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+...
+plugins: [
+  new HtmlWebpackPlugin({
+    template: './src/index.html'
+  }),
+```
 
