@@ -24,10 +24,12 @@ module.exports = {
     loaders: [
 
       // Configure the Babel loader, which handles all .js files
-      { test: /\.js$/,
-        include: path.join(__dirname, 'src'),
+      { test: /\.js$/,  // filename pattern for files to process 
+        include: path.resolve(__dirname, 'src'),  // where they are
         loader: 'babel-loader',
+        // Options that get passed to Babel:
         query: {
+          plugins: ['transform-runtime'], // reduces duplication
           presets: ["es2015"],  
         }
       },
