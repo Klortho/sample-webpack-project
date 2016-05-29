@@ -1,0 +1,16 @@
+{
+  "name": "sample-project",
+  "version": "0.0.1",
+  "description": "Sample project for JavaScript client-side library development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "babel",
+    "es2015"
+  ],
+  "author": "NCBI",
+  "license": "SEE LICENSE IN LICENSE.md"
+}
