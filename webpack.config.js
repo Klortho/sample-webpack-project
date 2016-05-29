@@ -1,3 +1,6 @@
+// Webpack configuration reference:
+// https://webpack.github.io/docs/configuration.html
+
 var path = require('path');
 var webpack = require('webpack');
 
@@ -16,8 +19,9 @@ module.exports = {
 
   // Declare directory and filename of webpack's output
   output: {
-      publicPath: '/',
-      filename: 'main.js'
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    filename: 'main.js'
   },
 
   module: {

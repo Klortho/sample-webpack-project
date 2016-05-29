@@ -6,8 +6,17 @@ application, you should delete this from your repo.
 
 Here are the features of this sample project:
 
-* Webpack to build client-side distribution bundles
-* Babel, so you can write your code in EcmaScript 6 (ES2015)
+* Client-side distribution bundles generated with webpack
+* Write your code in EcmaScript 6 (ES2015); it is transpiled with
+  Babel
+* Including using ES6 module syntax
+* Supports CSS and Less
+* Dev server with auto-reload
+* Produces sourcemaps
+
+For how to do basic development tasks, see the [README.md](README.md).
+The rest of this file contains more detailed information.
+
 
 
 # Steps to set this up from scratch
@@ -39,8 +48,8 @@ npm i --save-dev webpack webpack-dev-server
 # Babel transpiler for ES2015
 npm i --save-dev babel-core babel-loader babel-preset-es2015
 
-# Babel runtime polyfills
-npm i --save babel-polyfill
+# Babel runtime polyfills and helper
+npm i --save babel-polyfill babel-plugin-transform-runtime
 ```
 
 Create the webpack.config.js (see the repo).
